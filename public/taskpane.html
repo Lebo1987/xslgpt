@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>XSLGPT – Formula Assistant</title>
+
+    <!-- Office JavaScript API -->
+    <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script>
+
+    <!-- For more information on Fluent UI, visit https://developer.microsoft.com/fluentui -->
+    <link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/11.0.0/css/fabric.min.css"/>
+
+    <!-- Custom styles -->
+    <link href="taskpane.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="ms-font-m ms-Fabric">
+    <!-- Sideload message -->
+    <div id="sideload-msg" style="padding: 10px; text-align: center; color: gray;">
+        Please sideload your add-in to see app content.
+    </div>
+
+    <!-- Main app body -->
+    <div id="app-body" style="display: none;">
+        <div id="container">
+            <!-- Header -->
+            <header class="app-header">
+                <div class="header-content">
+                    <h1 class="app-title">XSLGPT</h1>
+                    <p class="app-subtitle">AI Formula Assistant</p>
+                </div>
+            </header>
+
+            <!-- Main Content -->
+            <main class="main-content">
+                <!-- Input Section -->
+                <section class="input-section">
+                    <div class="form-group">
+                        <label for="prompt-input" class="input-label">
+                            <span class="label-text">What Excel formula do you need?</span>
+                            <span class="label-hint">Describe what you want to calculate</span>
+                        </label>
+                        <textarea 
+                            id="prompt-input" 
+                            placeholder="e.g., Calculate the sum of cells A1 to A10, or Find the average of values in column B"
+                            rows="3"
+                            class="prompt-textarea"></textarea>
+                    </div>
+                    
+                    <button 
+                        id="generate-btn" 
+                        class="generate-button"
+                        disabled>
+                        <span class="button-icon">✨</span>
+                        <span class="button-text">Generate Formula</span>
+                    </button>
+                    
+                    <!-- Loading Indicator -->
+                    <div id="loading" class="loading-indicator hidden">
+                        <div class="spinner"></div>
+                        <span class="loading-text">Generating your formula...</span>
+                    </div>
+                </section>
+
+                <!-- Result Section -->
+                <section class="result-section">
+                    <!-- Formula result will be inserted here by displayFormulaResult() -->
+                </section>
+
+                <!-- History Section -->
+                <section class="history-section">
+                    <div class="history-header">
+                        <h3 class="history-title">Previous Prompts</h3>
+                        <span class="history-count" id="history-count">0</span>
+                    </div>
+                    <div id="prompt-history" class="history-list">
+                        <!-- History items will be populated by taskpane.js -->
+                    </div>
+                </section>
+            </main>
+
+            <!-- Footer -->
+            <footer class="app-footer">
+                <div class="footer-content">
+                    <span class="footer-text">Powered by OpenAI GPT-3.5</span>
+                    <span class="footer-version">v1.0.0</span>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="config.js"></script>
+    <script src="taskpane.js"></script>
+</body>
+</html>
