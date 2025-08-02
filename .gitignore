@@ -187,4 +187,8 @@ Thumbs.db
 
 # Excel temporary files
 ~$*.xlsx
-~$*.xls 
+~$*.xls
+
+# Additional environment files
+env.production
+env.example 
