@@ -13,9 +13,9 @@
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="XSLGPT" />
   <Description DefaultValue="AI-powered Excel formula assistant"/>
-  <IconUrl DefaultValue="https://yourdomain.com/xslgpt/assets/icon-32.png"/>
-  <HighResolutionIconUrl DefaultValue="https://yourdomain.com/xslgpt/assets/hi-res-icon.png"/>
-  <SupportUrl DefaultValue="https://yourdomain.com/xslgpt/support"/>
+  <IconUrl DefaultValue="https://xslgpt.onrender.com/assets/icon-32.svg"/>
+  <HighResolutionIconUrl DefaultValue="https://xslgpt.onrender.com/assets/hi-res-icon.svg"/>
+  <SupportUrl DefaultValue="https://xslgpt.onrender.com/support"/>
   <!-- End Basic Settings. -->
 
   <!-- Begin TaskPane Mode integration. -->
@@ -23,7 +23,7 @@
     <Host Name="Workbook"/>
   </Hosts>
   <DefaultSettings>
-    <SourceLocation DefaultValue="https://yourdomain.com/xslgpt/taskpane.html"/>
+    <SourceLocation DefaultValue="https://xslgpt.onrender.com/taskpane.html"/>
   </DefaultSettings>
   <!-- End TaskPane Mode integration. -->
 
@@ -75,14 +75,14 @@
     </Hosts>
     <Resources>
       <bt:Images>
-        <bt:Image id="Icon.16x16" DefaultValue="https://yourdomain.com/xslgpt/assets/icon-16.png"/>
-        <bt:Image id="Icon.32x32" DefaultValue="https://yourdomain.com/xslgpt/assets/icon-32.png"/>
-        <bt:Image id="Icon.80x80" DefaultValue="https://yourdomain.com/xslgpt/assets/icon-80.png"/>
+        <bt:Image id="Icon.16x16" DefaultValue="https://xslgpt.onrender.com/assets/icon-16.svg"/>
+        <bt:Image id="Icon.32x32" DefaultValue="https://xslgpt.onrender.com/assets/icon-32.svg"/>
+        <bt:Image id="Icon.80x80" DefaultValue="https://xslgpt.onrender.com/assets/icon-80.svg"/>
       </bt:Images>
       <bt:Urls>
-        <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://yourdomain.com/xslgpt/docs"/>
-        <bt:Url id="Commands.Url" DefaultValue="https://yourdomain.com/xslgpt/commands.html"/>
-        <bt:Url id="Taskpane.Url" DefaultValue="https://yourdomain.com/xslgpt/taskpane.html"/>
+        <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://xslgpt.onrender.com/docs"/>
+        <bt:Url id="Commands.Url" DefaultValue="https://xslgpt.onrender.com/commands.html"/>
+        <bt:Url id="Taskpane.Url" DefaultValue="https://xslgpt.onrender.com/taskpane.html"/>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="GetStarted.Title" DefaultValue="Welcome to XSLGPT!"/>

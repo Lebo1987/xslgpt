@@ -129,6 +129,43 @@ app.get('/manifest.xml', (req, res) => {
     res.sendFile(path.join(__dirname, 'manifest.xml'));
 });
 
+// Serve taskpane.html at root level for Excel Add-in
+app.get('/taskpane.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'taskpane.html'));
+});
+
+// Serve taskpane.css at root level
+app.get('/taskpane.css', (req, res) => {
+    res.setHeader('Content-Type', 'text/css');
+    res.sendFile(path.join(__dirname, 'public', 'taskpane.css'));
+});
+
+// Serve taskpane.js at root level
+app.get('/taskpane.js', (req, res) => {
+    res.setHeader('Content-Type', 'application/javascript');
+    res.sendFile(path.join(__dirname, 'public', 'taskpane.js'));
+});
+
+// Serve config.js at root level
+app.get('/config.js', (req, res) => {
+    res.setHeader('Content-Type', 'application/javascript');
+    res.sendFile(path.join(__dirname, 'public', 'config.js'));
+});
+
+// Serve commands.html at root level
+app.get('/commands.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'commands.html'));
+});
+
+// Serve assets directory with proper MIME types
+app.use('/assets', express.static(path.join(__dirname, 'public', 'assets'), {
+  setHeaders: function (res, filePath) {
+    if (filePath.endsWith('.svg')) {
+      res.setHeader('Content-Type', 'image/svg+xml');
+    }
+  }
+}));
+
 // Handle favicon requests
 app.get('/favicon.ico', (req, res) => {
     res.setHeader('Content-Type', 'image/x-icon');
